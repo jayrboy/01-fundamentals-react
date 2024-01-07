@@ -24,10 +24,7 @@ const Book = () => {
 }
 
 const Image = () => (
-  <img
-    src="https://m.media-amazon.com/images/I/91F6NVlGGjL._AC_UY218_.jpg"
-    alt="Trust (Pulitzer Prize Winner)"
-  />
+  <img src="./images/book-1.jpg" alt="Interesting Facts For Curious Minds" />
 )
 const Title = () => <h2>Trust (Pulitzer Prize Winner)</h2>
 const Author = () => {
