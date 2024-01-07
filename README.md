@@ -1022,3 +1022,50 @@ const Book = ({ book: { img, title, author } }) => {
   )
 }
 ```
+
+#### My Personal Preference
+
+- utilize spread operator (...) - copy values
+- Spread Operator
+- [JS Nuggets - Spread Operator](https://www.youtube.com/watch?v=4Zyr5a3m0Fc&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=10)
+
+```js
+const friends = ['john', 'peter', 'anna']
+const newFriends = [...friends, 'susan']
+console.log(friends)
+console.log(newFriends)
+const someObject = {
+  name: 'john',
+  job: 'developer',
+}
+// COPY NOT A REFERENCE !!!!
+const newObject = { ...someObject, location: 'florida' }
+console.log(someObject)
+console.log(newObject)
+```
+
+```js
+function BookList() {
+  return (
+    <section className="booklist">
+      {books.map((book) => {
+        return <Book {...book} key={book.id} />
+      })}
+    </section>
+  )
+}
+
+const Book = (props) => {
+  const { img, title, author } = props
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author} </h4>
+    </article>
+  )
+}
+const Book = ({ img, title, author }) => {
+  // rest of the code
+}
+```
