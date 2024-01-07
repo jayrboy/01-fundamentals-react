@@ -2,15 +2,31 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
-const author = 'Alan Alickovic'
-const title = 'React Application Architecture for Production'
-const img = './images/book-1.jpg'
+const firstBook = {
+  author: 'Alan Alickovic',
+  title: 'React Application Architecture for Production',
+  img: './images/book-1.jpg',
+}
+
+const secondBook = {
+  author: 'Carl Rippon ',
+  title: 'Learn React with TypeScript',
+  img: './images/book-2.jpg',
+}
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} />
+      <Book
+        author={firstBook.author}
+        title={firstBook.title}
+        img={firstBook.img}
+      />
+      <Book
+        author={secondBook.author}
+        title={secondBook.title}
+        img={secondBook.img}
+      />
     </section>
   )
 }
