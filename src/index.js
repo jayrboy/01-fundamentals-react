@@ -1,8 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-const Greeting = () => {
-  return <h2>My First Component</h2>
+function Greeting() {
+  return (
+    <div>
+      <Person />
+      <Message />
+    </div>
+  )
+}
+
+const Person = () => <h2>jay jakkrit</h2>
+const Message = () => {
+  return <p>this is my message</p>
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
