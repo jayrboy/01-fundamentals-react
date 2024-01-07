@@ -36,3 +36,13 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
   The markdown file where you can share more info about the project for example build instructions and summary
 
 - zoom 175%
+
+#### Remove Boilerplate
+
+- remove src folder
+- create src folder
+
+  - create index.js inside src
+
+- toggle sidebar CMD + B
+- shortcuts settings/keyboard shortcuts
