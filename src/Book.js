@@ -1,6 +1,7 @@
 const Book = (props) => {
-  const { img, title, author, getBook, id } = props
+  const { img, title, author, getBook, id, number } = props
   // console.log(props);
+  console.log(number)
   const getSingleBook = () => {
     getBook(id)
   }
@@ -11,6 +12,7 @@ const Book = (props) => {
 
       <button onClick={getSingleBook}>click me</button>
       <h4>{author}</h4>
+      <span className="number">{`# ${number + 1}`}</span>
     </article>
   )
 }
