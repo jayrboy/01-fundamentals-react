@@ -926,3 +926,52 @@ function BookList() {
   )
 }
 ```
+
+#### Key Prop
+
+- typically it's going to be id
+
+```js
+const books = [
+  {
+    author: 'Jordan Moore',
+    title: 'Interesting Facts For Curious Minds',
+    img: './images/book-1.jpg',
+    id: 1,
+  },
+  {
+    author: 'James Clear',
+    title: 'Atomic Habits',
+    img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
+    id: 2,
+  },
+]
+
+function BookList() {
+  return (
+    <section className="booklist">
+      {books.map((book) => {
+        console.log(book)
+        const { img, title, author, id } = book
+        return <Book book={book} key={id} />
+      })}
+    </section>
+  )
+}
+```
+
+- you will see index,but it's not advised if the list is changing
+
+```js
+function BookList() {
+  return (
+    <section className="booklist">
+      {books.map((book, index) => {
+        console.log(book)
+        const { img, title, author, id } = book
+        return <Book book={book} key={index} />
+      })}
+    </section>
+  )
+}
+```
