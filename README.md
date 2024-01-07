@@ -1260,3 +1260,37 @@ const Book = (props) => {
 ```
 
 - remove button
+
+#### Prop Drilling
+
+- react data flow - can only pass props down
+- alternatives Context API, redux, other state libraries
+
+```js
+function BookList() {
+  const someValue = 'shakeAndBake'
+  const displayValue = () => {
+    console.log(someValue)
+  }
+  return (
+    <section className="booklist">
+      {books.map((book) => {
+        return <Book {...book} key={book.id} displayValue={displayValue} />
+      })}
+    </section>
+  )
+}
+
+const Book = (props) => {
+  const { img, title, author, displayValue } = props
+
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <button onClick={displayValue}>click me</button>
+      <h4>{author} </h4>
+    </article>
+  )
+}
+```
