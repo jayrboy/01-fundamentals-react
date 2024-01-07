@@ -46,3 +46,100 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
 
 - toggle sidebar CMD + B
 - shortcuts settings/keyboard shortcuts
+
+#### First Component
+
+```js
+function Greeting() {
+  return <h2>My First Component</h2>
+}
+
+// arrow function also works
+
+const Greeting = () => {
+  return <h2>My First Component</h2>
+}
+```
+
+- starts with capital letter
+- must return JSX (html)
+- always close tag <Greeting />
+
+##### Typical Component
+
+```js
+// imports or logic
+
+const Greeting = () => {
+  return <h2>My First Component</h2>
+}
+export default Greeting
+```
+
+##### Root Component (only one)
+
+index.js
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+
+function Greeting() {
+  return <h2>My First Component</h2>
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(<Greeting />)
+```
+
+#### Possible Bug
+
+If for some reason you still have this error in the terminal
+
+```
+Module not found: Error: Can't resolve 'path/index.js'
+```
+
+Just restart the server
+
+- CTRL + C (stop the server)
+- "npm start" (start the dev server)
+
+#### Extensions and settings.json
+
+- Auto Rename Tag
+- Highlight Matching Tag
+  - customize in settings.json
+- Prettier
+  - format on save
+  - format on paste
+  - Default Formatter (Prettier - Code formatter)
+
+settings.json
+
+```json
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+```
+
+- Emmet
+
+settings.json
+
+```json
+"emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+```
+
+- ES7 Snippets
+  - rafce (arrow func with export)
+  - rfce (regular func with export )
+  - same as the file name
+  - react auto import
+    - uncheck
+    - React Snippets › Settings: Import React On Top
