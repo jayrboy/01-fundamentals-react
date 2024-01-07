@@ -270,3 +270,91 @@ const Message = () => {
 - top right corner
 - more tools/extensions
 - open chrome web store
+
+#### Book List
+
+- setup structure
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+
+function BookList() {
+  return (
+    <section>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  )
+}
+
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  )
+}
+
+const Image = () => <h2>image placeholder</h2>
+const Title = () => {
+  return <h2>Book Title</h2>
+}
+const Author = () => <h4>Author</h4>
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(<BookList />)
+```
+
+- in search engine type - 'amazon best selling books'
+  [Amazon Best Sellers](https://www.amazon.com/Best-Sellers-Books/zgbs/books/)
+- DON'T NEED TO BUY ANYTHING !!!
+- NOT AN AFFILIATE LINK !!!!
+- choose a book
+- copy image, title and author
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+
+function BookList() {
+  return (
+    <section>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  )
+}
+
+const Book = () => {
+  return (
+    <article className="book">
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  )
+}
+
+const Image = () => (
+  <img
+    src="https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg"
+    alt="Interesting Facts For Curious Minds"
+  />
+)
+const Title = () => {
+  return <h2>Interesting Facts For Curious Minds</h2>
+}
+const Author = () => <h4>Jordan Moore </h4>
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(<BookList />)
+```
