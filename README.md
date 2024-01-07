@@ -1583,3 +1583,54 @@ index.css
   color: #fff;
 }
 ```
+
+#### Add Title
+
+- add a title to our app (css optional)
+- change page title
+
+index.js
+
+```js
+function BookList() {
+  return (
+    <>
+      <h1>amazon best sellers</h1>
+      <section className="booklist">
+        {books.map((book) => {
+          return <Book {...book} key={book.id} />
+        })}
+      </section>
+    </>
+  )
+}
+```
+
+index.css
+
+```css
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: capitalize;
+}
+```
+
+public/index.html
+
+```html
+<title>Best Sellers</title>
+```
+
+#### Build Production Application
+
+- stop the dev server "ctrl + c"
+- run "npm run build"
+- build folder gets created
+
+#### Netlify
+
+- sign up
+- add new site/deploy manually
+- choose build folder
+- rename site - site settings/change site name

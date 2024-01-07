@@ -10,11 +10,16 @@ const BookList = () => {
     console.log(book)
   }
   return (
-    <section className="booklist">
-      {books.map((book, index) => {
-        return <Book {...book} key={book.id} getBook={getBook} number={index} />
-      })}
-    </section>
+    <>
+      <h1>React web application</h1>
+      <section className="booklist">
+        {books.map((book, index) => {
+          return (
+            <Book {...book} key={book.id} getBook={getBook} number={index} />
+          )
+        })}
+      </section>
+    </>
   )
 }
 
