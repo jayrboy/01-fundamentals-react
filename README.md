@@ -975,3 +975,50 @@ function BookList() {
   )
 }
 ```
+
+#### Pass The Entire Object
+
+- render component
+- pass entire object
+- Destructuring (object)
+  [JS Nuggets - Destructuring (object)](https://www.youtube.com/watch?v=i4vhNKihfto&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=8&t=1s)
+
+```js
+function BookList() {
+  return (
+    <section className="booklist">
+      {books.map((book) => {
+        console.log(book)
+        const { img, title, author } = book
+        return <Book book={book} />
+      })}
+    </section>
+  )
+}
+
+const Book = (props) => {
+  const { img, title, author } = props.book
+
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author} </h4>
+    </article>
+  )
+}
+```
+
+- alternative
+
+```js
+const Book = ({ book: { img, title, author } }) => {
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author} </h4>
+    </article>
+  )
+}
+```
