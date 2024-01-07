@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
-const book = [
+const books = [
   {
     author: 'Alan Alickovic',
     title: 'React Application Architecture for Production',
@@ -15,18 +15,13 @@ const book = [
   },
 ]
 
-const names = ['book', 'name', 'test']
-const newName = names.map((name) => {
-  return <h1>{name}</h1>
-})
-
-console.log(newName)
-
 const BookList = () => {
   return (
     <section className="booklist">
-      {names.map((name) => {
-        return <h1>{name}</h1>
+      {books.map((book) => {
+        console.log(book)
+        const { img, title, author } = book
+        return <Book img={img} author={book.author} title={book.title} />
       })}
     </section>
   )
