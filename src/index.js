@@ -11,7 +11,7 @@ const BookList = () => {
   }
   return (
     <>
-      <h1>React web application</h1>
+      <h1>ร้านหนังสือ</h1>
       <section className="booklist">
         {books.map((book, index) => {
           return (

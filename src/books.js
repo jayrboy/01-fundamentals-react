@@ -1,24 +1,27 @@
-import img1 from './images/book-1.jpg'
-import img2 from './images/book-2.jpg'
-import img3 from './images/book-3.jpg'
+import img1 from './images/book-1.png'
+import img2 from './images/book-2.png'
+import img3 from './images/book-3.png'
 
 export const books = [
   {
-    author: 'Alan Alickovic',
-    title: 'React Application Architecture for Production',
-    img: img1,
     id: 1,
+    author: 'บัญชา ปะสีละเตสัง',
+    title: 'พัฒนา Web Application ด้วย JavaScript และ Node.js',
+    img: img1,
+    price: 320,
   },
   {
-    author: 'Carl Rippon',
-    title: 'Learn React with TypeScript',
-    img: img2,
     id: 2,
+    author: 'บัญชา ปะสีละเตสัง',
+    title: 'พัฒนา Application ด้วย React และ React Native',
+    img: img2,
+    price: 330,
   },
   {
-    author: 'Theophilus Edet',
-    title: 'React Web Development',
-    img: img3,
     id: 3,
+    author: 'บัญชา ปะสีละเตสัง',
+    title: 'สร้างการเรียนรู้สำหรับ AI ด้วย Python Machine Learning',
+    img: img3,
+    price: 330,
   },
 ]
